@@ -1,0 +1,8 @@
+services:
+  atelier:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data        # la base SQLite est conservée ici
+    restart: unless-stopped
